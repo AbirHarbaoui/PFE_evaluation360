@@ -1,0 +1,38 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+
+<body>
+<div align="center" >
+<h1>Liste des commentaires </h1>
+<a th:href="@{/ajouc}"  class="btn btn-warning"><h4>AJOUTER</h4></a></center>
+<table border="4" class="table table-striped">
+<thead>
+<tr>
+<th>Prénom d'employé</th>
+<th>Email d'employé</th>
+<th>Message d'employé</th>
+<th>Date d'écriture</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="contact :${contacts}">
+<td th:text="${contact.nom}"></td>
+<td th:text="${contact.email}"></td>
+<td th:text="${contact.message}"></td>
+<td th:text="${contact.DDD}"></td>
+<td>
+<a th:href="@{/ajoutc/{id}(id=${contact.id})}" class="btn btn-success">MODIFIER</a>
+<a th:href="@{/delete/{id}(id=${contact.id})}" class="btn btn-danger">SUPPRIMER</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

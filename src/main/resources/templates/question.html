@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>evaluation</title>
+</head>
+<body>
+<h3> Quiz </h3>
+
+<ol type="1">
+<div th:each="question :${questions}">
+<h3 th:text="${question.content}"></h3>
+	
+	<ol type="a">
+		<div th:each="answer :${answers}">
+		<li>
+		<input type="radio" value="${answer.id}">
+		<h5 th:text="${answer.content}"></h5>
+		</li>		
+	</ol>
+	
+	
+</div>
+</ol>
+</body>
+</html>

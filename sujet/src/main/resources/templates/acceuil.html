@@ -1,0 +1,973 @@
+<html lang="en">
+<head>
+<title>Acceuil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color: #fb911f;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.btn-reserve{
+    padding: 10px 20px;
+    background: #fb911f;
+   margin-top: -10px;
+   text-transform:uppercase ;
+}
+
+.btn-reserve:hover{
+    background: #d87710;
+    transition: ease-out;
+}
+
+header .navbar li a:hover{
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/so66.jpg");
+    background-size: cover;
+}
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.contenu p:nth-child(2){
+    color: #ffff;
+    font-size: 1.2em;
+}
+
+.btn1{
+    font-size: 1em;
+    color: #fff;
+    background: #fb911f;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn2{
+    font-size: 1em;
+    color: #fff;
+    background: #2a4963;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn1:hover{
+letter-spacing: 4px;
+}
+section{
+    padding: 100px;
+}
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+}
+
+.titre-texte{
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-texte span{
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img{
+    height: 450px;
+    width: 600px;
+    position: relative;
+}
+
+.titre{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu{
+    margin-top: -100px;
+}
+
+.menu .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box{
+    width: 350px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0,0,0, 0.8);
+}
+
+.menu .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text{
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.menu .contenu .box .text h3{
+    font-weight: 400;
+}
+
+.expert{
+    margin-top:-100px;
+}
+
+.expert .contenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box{
+    width: 250px;
+    margin: 15px;
+}
+.expert .contenu .box img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.expert .contenu .box h3{
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+}
+
+.temoignage{
+    background-image: url("images/ab.jpg");
+    background-size: cover;
+}
+
+.temoignage .contenu{
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.temoignage .contenu .box{
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.temoignage .contenu .box .imbox{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.temoignage .contenu .box .imbox img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenu .box .text{
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenu .box .text h3{
+    color: #fb911f;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.blanc .titre-texte{
+    color: #fff;
+}
+
+.blanc .titre-texte,
+.blanc p{
+    color: #fff;
+}
+
+.contact{
+    background-image: url("images/c44.png");
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+.contactform{
+    padding: 75px 50px;
+    background: #fb911f;
+    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    max-width: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+}
+
+.contactform .inputboite{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #fb911f;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgba(228,222,222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #333;
+}
+
+.copyright a {
+    color: #fb911f;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.contact .titre-text span{
+    color: #fb911f;
+    font-size: 2em;
+}
+
+header.sticky{
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{
+    color: #000;
+}
+
+header.sticky .navbar li a {
+    color: #000;
+}
+
+header.sticky li a:hover{
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+@media (max-width: 991px) {
+header, 
+header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.navbar{
+    display: none;
+}
+section{
+    padding: 20px;
+}
+
+header .navbar.active{
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+}
+
+.menuToggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+}
+
+.menuToggle.active
+{
+    background-image: url(./images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+}
+
+header.sticky .menuToggle{
+    filter: invert(1);
+}
+
+
+.banniere .contenu h2{
+    font-size: 2em;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1.2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.temoignage h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.temoignage p{
+text-align: center;
+}
+
+.contactform{
+    margin-left: 25%;
+}
+
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}
+
+
+.contac{
+    background: #fb911f;;
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!--navbar-->
+<header>
+
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/logo.jpg" alt="" th:src="@{images/logo.jpg}"/>
+
+ <div class="menuToggle" onclick="toggleMenu();"></div>
+<ul class="navbar">
+<li><a href="#banniere" onclick="toggleMenu();">Acceuil</a></li>
+<li><a href="#apropos" onclick="toggleMenu();">A propos</a></li>
+<li><a href="#menu" onclick="toggleMenu();">Clients</a></li>
+<li><a href="#expert" onclick="toggleMenu();">Domaines d'Activité</a></li>
+<li><a th:href="@{/loooog}">RH</a></li>
+<li><a th:href="@{/ques}">Evaluation</a></li>
+<li><a href="#temoignage" onclick="toggleMenu();">Temoignage</a></li>
+<li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+<a href="" class="btn-reserve" onclick="toggleMenu();">DECONNECTER</a>
+</ul>
+</header>
+<section class="banniere" id="banniere" >
+<div class="contenu">
+
+
+<h2>BIENVENUE A NOTRE SOCIETE </h2>
+<p><h5>Le client est au centre de nos intérêt c’est pour cela que nous fournissons un effort soutenu pour le suivi des évolutions technologiques.
+<p><h3> Pour faire un test , Cliquez ici</h3></p>
+<a href="#" class="btn2">Evaluation</a>
+
+</div>
+</section>
+
+
+<!-- apropos-->
+<section class="apropos" id="apropos">
+<div class="row">
+<div class="col50">
+<h2 class="titre-texte"><span> A</span> propos de Nous </h2>
+<p>Établie en Tunisie depuis plus de 30 ans, La Générale Tunisienne de l’Informatique est un acteur majeur en matière de logiciels et services informatiques dédiés aux institutions financières. Grâce à nos solutions, plusieurs acteurs bancaires de référence optimisent leur efficacité, leur souplesse et leur capacité de réaction face aux enjeux de leurs activités.
+Au début des années 90, nous nous sommes lancée dans la conception et la programmation orientée objet. A cet effet une bibliothèque de classes a été conçue et développée et continue d’être utilisée dans toutes les applications développées par notre société.
+Depuis quelques années, GTI n’a pas cessé de consentir d’importants efforts dans les nouvelles technologies.</p>
+
+<p><h4> * Constitution de l’équipe:</h4><br>
+03 Ingénieurs Directeurs de Projets<br>
+06 Ingénieurs Chefs de Projets<br>
+25 Ingénieurs Concepteurs et de Développement<br>
+03 Intervenants Helpdesk<br>
+05 Consultants – Ingénieurs qualité<br>
+02 Administratifs</p>
+</div>
+<div class="col50">
+<div class="img">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/r.jpg" alt="" th:src="@{images/r.jpg}"/>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- clients -->
+<section class="menu" id="menu">
+
+<div class="titre">
+<h2 class="titre-texte">Nos <span> C</span>lients </h2>
+<p>Nos principaux clients sont des références de la place dans le secteur financier :</p>
+</div>
+
+<div class="contenu">
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture1.PNG" alt="" th:src="@{images/Capture1.PNG}"/>
+</div>
+<div class="text">
+<h3>Attijari BANK</h3>
+</div>
+</div>
+
+
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture2.PNG" alt="" th:src="@{images/Capture2.PNG}"/>
+</div>
+<div class="text">
+<h3>BIAT</h3>
+</div>
+</div>
+
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture3.PNG" alt="" th:src="@{images/Capture3.PNG}"/>
+</div>
+<div class="text">
+<h3>BANQUE DE L'HABITAT</h3>
+</div>
+</div>
+
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture4.PNG" alt="" th:src="@{images/Capture4.PNG}"/>
+</div>
+<div class="text">
+<h3>UBCI</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture5.PNG" alt="" th:src="@{images/Capture5.PNG}"/>
+</div>
+<div class="text">
+<h3>STB BANK</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture6.PNG" alt="" th:src="@{images/Capture6.PNG}"/>
+</div>
+<div class="text">
+<h3>AMEN BANK</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture7.PNG" alt="" th:src="@{images/Capture7.PNG}"/>
+</div>
+<div class="text">
+<h3>STUSID BANK</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture8.PNG" alt="" th:src="@{images/Capture8.PNG}"/>
+</div>
+<div class="text">
+<h3>ATTIJARI INTERMEDIATION</h3>
+</div>
+</div>
+
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture9.PNG" alt="" th:src="@{images/Capture9.PNG}"/>
+</div>
+<div class="text">
+<h3>UIB</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Capture10.PNG" alt="" th:src="@{images/Capture10.PNG}"/>
+</div>
+<div class="text">
+<h3>MAXULA BOURSE</h3>
+</div>
+</div>
+
+
+</div>
+
+
+<div class="titre">
+<a href="#" class="btn1">Voir tout</a>
+</div>
+
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- expert -->
+<section class="expert" id="expert">
+
+<div class="titre">
+<h2 class="titre-texte"><span>D</span>omaines d' <span> A</span>ctivites</h2>
+<p>Ces principaux domaines d’activités sont: des solutions éprouvées couvrant diverses opérations bancaires et financières. En effet plus de 90% du revenu est réalisé avec des établissements financiers, et plus de 12% du revenu annuel de la GTI est consacré aux activités de recherche et Développement.</p>
+</div>
+
+<div class="contenu">
+
+<div class="box">
+<div class="imbox">
+
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/Bancaire.png" alt="" th:src="@{images/Bancaire.png}"/>
+</div>
+<div class="text">
+<h3>Activités bancaires</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/bourciere.PNG" alt="" th:src="@{images/bourciere.PNG}"/>
+</div>
+<div class="text">
+<h3>Activités bourcières</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/s.jpg" alt="" th:src="@{images/s.jpg}"/>
+</div>
+<div class="text">
+<h3>Système comptable</h3>
+</div>
+</div>
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/b.jpg" alt="" th:src="@{images/b.jpg}"/>
+</div>
+<div class="text">
+<h3>E-banking</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- temoignage -->
+<section class="temoignage" id="temoignage">
+
+<div class="titre blanc">
+<h2 class="titre-texte">Que Disent Nos<span> C</span>lients</h2>
+
+</div>
+
+<div class="contenu">
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/h1.jpg" alt="" th:src="@{images/h1.jpg}"/>
+</div>
+<div class="text">
+<p>>« Vous êtes vraiment efficace et à l'écoute des clients »</p>
+<h3>AMEN BANK</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/h22.jpg" alt="" th:src="@{images/h22.jpg}"/>
+</div>
+<div class="text">
+<p>« Écoute, ça me fait plaisir! Nous sommes vraiment satisfaits du site et tant mieux si d'autres ont la chance de travailler avec vous. »</p>
+<h3>STB BANK</h3>
+</div>
+</div>
+
+
+<div class="box">
+<div class="imbox">
+<img src="C:/Users/abir/Documents/workspace-spring-tool-suite-4-4.13.1.RELEASE/sujet/sujet/src/main/resources/static/images/h3.jpg" alt="" th:src="@{images/h3.jpg}"/>
+</div>
+<div class="text">
+<p>« C'est super beau </p>
+<p>Merci !! »</p>
+<h3>BIAT</h3>
+</div>
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<br><br><br>
+
+
+
+
+<!-- contact -->
+<section class="contact" id="contact">
+<div class="titre noir">
+<h2 class="titre-texte"><span>C</span>ontact </h2>
+<p>ken theb informations raw hne</p>
+</div>
+<center>
+<div class="contactform">
+<p>
+<h3>Adresse : </h3>
+Rue Abou Hamed EL Ghazali Résidence OMAR Bloc A-1073 <br/>
+Montplaisir <br/>
+Tunis <br/>
+</p>
+<br/>
+
+
+<p>
+<h3>Email : </h3>
+gti.informatique@gtiinfo.com.tn 
+</p>
+<br/>
+
+
+<p>
+<h3>Numéro de téléphone : </h3>
+(216) 71 95 17 03 
+</p>
+<br/>
+
+<p>
+<h3>Fax : </h3><br/>
+(216) 71 95 13 69 
+</p>
+<br/>
+
+<a th:href="@{/contact}"  class="btn btn-light"><h3>Ajouter</h3></a></center>
+<br>
+</div>
+</center>
+</section>
+
+<br/><br/>
+
+
+
+
+
+
+<br/><br/>
+<!-- footer -->
+<div class="copyright">
+<p> copyright 2022  <a href="#"></a></p>
+</div>
+
+
+
+ <script type="text/javascript">
+     window.addEventListener('scroll', function(){
+         const header =document.querySelector('header');
+         header.classList.toggle("sticky", window.scrollY > 0 );
+     });
+
+     function toggleMenu(){
+         const tmenuToggle = document.querySelector('.menuToggle');
+         const navbar = document.querySelector('.navbar');
+         navbar.classList.toggle('active');
+         menuToggle.classList.toggle('active');
+     }
+ </script>
+
+
+
+
+</body>
+</html>
